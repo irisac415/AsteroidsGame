@@ -2,7 +2,7 @@
 public void setup() 
 {
   size(500,500);
-  background(0);
+  background(0,0,40);
   for(int i = 0; i < arr.length; i ++){
     arr[i] = new Star();
   }
@@ -14,7 +14,7 @@ Spaceship Sally = new Spaceship();
 
 public void draw() 
 {
-  background(20,0,40);
+  background(0,0,40);
   Sally.move();
   Sally.show();
   
