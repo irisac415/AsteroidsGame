@@ -31,7 +31,7 @@ public void keyPressed(){
   if(keyCode =='J')
     Sally.turn(10);
   if(keyCode == UP)
-    Sally.accelerate(2);
+    Sally.accelerate(1.5);
   if(keyCode == DOWN)
-    Sally.accelerate(-2);
+    Sally.accelerate(-1.5);
 }
