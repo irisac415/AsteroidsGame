@@ -5,7 +5,7 @@ class Star //note that this class does NOT extend Floater
   private int myColor;
   private int myOpacity;
   
-  Star(){
+  public Star(){
     myColor = color(255);
     myOpacity= (int)(Math.random()*120)+100;
     myX = (int)(Math.random()*500);
