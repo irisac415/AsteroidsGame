@@ -1,9 +1,11 @@
 class Spaceship extends Floater  
 {   
   public Spaceship(){
-    corners = 4;  //the number of corners, a triangular floater has 3   
-    xCorners = new int[]{-8,16,-8,-2};   
-    yCorners = new int[]{-8,0,8,0};   
+    corners = 6; //the number of corners, a triangular floater has 3   
+    //xCorners = new int[]{-8,16,-8,-2};   
+    //yCorners = new int[]{-8,0,8,0};   
+    xCorners = new int[]{-10,2,16,2,-10,-5};   
+    yCorners = new int[]{-9,6,0,-6,9,0};  
     myColor = color(245,215,215);   
     myCenterX = 250;
     myCenterY = 250; //holds center coordinates   
@@ -18,6 +20,3 @@ public void hyperspace(){
    myCenterY = (int)(Math.random()*480)+10;
 }
 }
-
-
-   
