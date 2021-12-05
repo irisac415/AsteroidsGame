@@ -6,12 +6,15 @@ public void setup()
   for(int i = 0; i < arr.length; i ++){
     arr[i] = new Star();
   }
+  for(int j = 0; j < 20; j ++){
+    andy.add(new Asteroid());
+  }
 }
 
 
 Star[] arr = new Star[175];
 Spaceship Sally = new Spaceship();
-
+ArrayList <Asteroid> andy = new ArrayList <Asteroid>();
 public void draw() 
 {
   background(0,0,40);
@@ -20,6 +23,11 @@ public void draw()
   
   for(int i = 0; i < arr.length; i ++)
     arr[i].show(); 
+  
+  for(int j = 0; j < andy.size(); j ++){
+    andy.get(j).show();
+    andy.get(j).move();
+  }
 }
 
 
