@@ -6,7 +6,7 @@ public void setup()
   for(int i = 0; i < arr.length; i ++){
     arr[i] = new Star();
   }
-  for(int j = 0; j < 20; j ++){
+  for(int j = 0; j < 50; j ++){
     andy.add(new Asteroid());
   }
   Sally.add(new Spaceship(260,260));
@@ -35,6 +35,10 @@ public void draw()
   for(int j = 0; j < andy.size(); j ++){
     andy.get(j).show();
     andy.get(j).move();
+    float d = dist((float)andy.get(j).getmyAX(),(float)andy.get(j).getmyAY(),(float)Sally.get(0).getmyCX(),(float)Sally.get(0).getmyCY());
+      if(d < 12)
+        andy.remove(j);
+      
   }
 }
 
