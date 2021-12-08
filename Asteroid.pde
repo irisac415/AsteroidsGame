@@ -43,4 +43,10 @@ class Asteroid extends Floater{
 
    
     }
+    public double getmyAX(){
+      return myCenterX;
+    }
+    public double getmyAY(){
+      return myCenterY;
+    }
   }
