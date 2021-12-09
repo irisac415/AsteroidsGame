@@ -16,7 +16,6 @@ public void setup()
   Sally.add(new Spaceship(220,300));
 }
 
-
 Star[] arr = new Star[175];
 ArrayList <Spaceship> Sally = new ArrayList <Spaceship>();
 
@@ -45,7 +44,6 @@ public void draw()
   }
 }
 
-  
 public void keyPressed(){
   if(key == ' '){
     Sally.get(0).hyperspace();
