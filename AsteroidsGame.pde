@@ -3,10 +3,6 @@ public void setup()
 {
   size(500,500);
   background(0,0,40);
-  noFill();
-  strokeWeight(5);
-  stroke(255);
-  rect(0,0,500,500);
   for(int i = 0; i < arr.length; i ++){
     arr[i] = new Star();
   }
@@ -28,6 +24,10 @@ ArrayList <Asteroid> andy = new ArrayList <Asteroid>();
 public void draw() 
 {
   background(0,0,40);
+  strokeWeight(5);
+  noFill();
+  stroke(255);
+  rect(0,0,500,500);
   for(int i = 0; i < Sally.size(); i ++){
     Sally.get(i).show();
     Sally.get(i).move();
@@ -43,7 +43,7 @@ public void draw()
         andy.remove(j);
   }
   if(andy.size() == 0){
-    fill(0,0,0,255);
+    fill(0,0,0,175);
     rect(-10,-10,510,510);
   }
 }
