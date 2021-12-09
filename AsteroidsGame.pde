@@ -51,10 +51,10 @@ public void keyPressed(){
     Sally.set(3,new Spaceship(Sally.get(0).getmyCX() - 40,Sally.get(0).getmyCY() - 40));
     Sally.set(4,new Spaceship(Sally.get(0).getmyCX() - 40,Sally.get(0).getmyCY() + 40));
   }
-  if(keyCode =='F')
+  if(keyCode ==LEFT)
   for(int i = 0; i < Sally.size(); i ++)
     Sally.get(i).turn(-10);
-  if(keyCode =='J')
+  if(keyCode ==RIGHT)
   for(int i = 0; i < Sally.size(); i ++)
     Sally.get(i).turn(10);
   if(keyCode == UP)
