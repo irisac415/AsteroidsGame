@@ -6,7 +6,7 @@ public void setup()
   for(int i = 0; i < arr.length; i ++){
     arr[i] = new Star();
   }
-  for(int j = 0; j < 51; j ++){
+  for(int j = 0; j < 1; j ++){
     andy.add(new Asteroid());
   }
   Sally.add(new Spaceship(260,260));
@@ -15,6 +15,7 @@ public void setup()
   Sally.add(new Spaceship(220,220));
   Sally.add(new Spaceship(220,300));
 }
+
 
 Star[] arr = new Star[175];
 ArrayList <Spaceship> Sally = new ArrayList <Spaceship>();
@@ -38,19 +39,31 @@ public void draw()
       if(d < 12)
         andy.remove(j);
   }
-  if(andy.size() == 0){
-    fill(0,0,0,175);
-    rect(-10,-10,510,510);
+    if(andy.size() == 0){
+      fill(0,0,0,50);
+      rect(-10,-10,510,510);
+      for(int i = 0; i < Sally.size(); i ++){
+        Sally.remove(i);
+        i--;
+      }
+      fill(0,0,0,255);
+      rect(100,200,300,40);
+      textSize(25);
+      fill(255);
+      textAlign(CENTER);
+      text("Game over; you won!",250,230);
+      
   }
 }
+
 
 public void keyPressed(){
   if(key == ' '){
     Sally.get(0).hyperspace();
-    Sally.set(1,new Spaceship(Sally.get(0).getmyCX() - 20,Sally.get(0).getmyCY() - 20));
-    Sally.set(2,new Spaceship(Sally.get(0).getmyCX() - 20,Sally.get(0).getmyCY() + 20));
-    Sally.set(3,new Spaceship(Sally.get(0).getmyCX() - 40,Sally.get(0).getmyCY() - 40));
-    Sally.set(4,new Spaceship(Sally.get(0).getmyCX() - 40,Sally.get(0).getmyCY() + 40));
+    Sally.set(1,new Spaceship(Sally.get(0).getmyCX() - 20,Sally.get(0).getmyCY() - 20, Sally.get(0).getPT()));
+    Sally.set(2,new Spaceship(Sally.get(0).getmyCX() - 20,Sally.get(0).getmyCY() + 20,Sally.get(0).getPT()));
+    Sally.set(3,new Spaceship(Sally.get(0).getmyCX() - 40,Sally.get(0).getmyCY() - 40,Sally.get(0).getPT()));
+    Sally.set(4,new Spaceship(Sally.get(0).getmyCX() - 40,Sally.get(0).getmyCY() + 40,Sally.get(0).getPT()));
   }
   if(keyCode ==LEFT)
   for(int i = 0; i < Sally.size(); i ++)
