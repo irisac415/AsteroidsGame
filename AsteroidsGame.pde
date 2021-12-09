@@ -6,7 +6,7 @@ public void setup()
   for(int i = 0; i < arr.length; i ++){
     arr[i] = new Star();
   }
-  for(int j = 0; j < 1; j ++){
+  for(int j = 0; j < 50; j ++){
     andy.add(new Asteroid());
   }
   Sally.add(new Spaceship(260,260));
