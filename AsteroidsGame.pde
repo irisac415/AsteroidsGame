@@ -24,10 +24,6 @@ ArrayList <Asteroid> andy = new ArrayList <Asteroid>();
 public void draw() 
 {
   background(0,0,40);
-  strokeWeight(5);
-  noFill();
-  stroke(255);
-  rect(0,0,500,500);
   for(int i = 0; i < Sally.size(); i ++){
     Sally.get(i).show();
     Sally.get(i).move();
